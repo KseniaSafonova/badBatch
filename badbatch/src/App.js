@@ -1,11 +1,12 @@
-import './App.css';
+import styles from './App.module.css';
 import Card from './Card';
 import Footer from './Footer';
 import Header from './Header';
 
+
 const clones = [
   {
-    title: "Hunter", imgLink: "https://starwarsblog.starwars.com/wp-content/uploads/2021/04/the-bad-batch-character-poster-hunter-01973863.jpg", content: "Hunter was the nickname of a clone commando sergeant who served as the commanding officer of Clone Force 99 in the Grand Army of the Republic during the Clone Wars, fought between the Galactic Republic and the Confederacy of Independent Systems. He was genetically altered to have heightened senses and commanded his comrades who had their own unique mutations, in what they called the 'Bad Batch'."
+    title: "Hunter", imgLink: "https://starwarsblog.starwars.com/wp-content/uploads/2021/04/the-bad-batch-character-poster-hunter-01973863.jpg", content: "Hunter was the nickname of a clone commando sergeant who served as the commanding officer of Clone Force 99 in the Grand Army of the Republic during the Clone Wars, fought between the Galactic Republic and the Confederacy of Independent Systems. He was genetically altered to have heightened senses and commanded his comrades who had their own unique mutations, in what they called the 'Bad Batch'.", text: "1111", isSelected: true
   },
   {
     title: "Crosshair", imgLink: "https://starwarsblog.starwars.com/wp-content/uploads/2021/04/the-bad-batch-character-poster-crosshair-373973937923.jpg", content: "CT-9904, nicknamed 'Crosshair', was a clone commando who served in the Grand Army of the Republic during the Clone Wars as part of Clone Force 99. Crosshair possessed genetic mutations that gave him exceptional eyesight and because of it, he acted as a sniper, taking advantage of his marksmanship skills. Upon the activation of Order 66, Crosshair was the lone member of Clone Force 99 that attempted to carry out the order."
@@ -25,9 +26,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className={styles.container}>
         {
-          clones.map((clone) => <Card title={clone.title} imgLink={clone.imgLink} content={clone.content} />)
+          clones.map((clone) => <Card title={clone.title} imgLink={clone.imgLink} content={clone.content} isSelected={clone.isSelected} />)
         }
       </div>
       <Footer />
