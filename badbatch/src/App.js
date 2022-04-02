@@ -1,4 +1,5 @@
 import styles from './App.module.css';
+
 import Card from './Card';
 import Footer from './Footer';
 import Header from './Header';
@@ -32,6 +33,7 @@ function App() {
         }
       </div>
       <Footer />
+
     </>
   );
 }

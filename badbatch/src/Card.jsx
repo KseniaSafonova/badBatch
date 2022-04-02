@@ -1,5 +1,6 @@
 
 import styles from './Card.module.css';
+import Button from './Button';
 
 function Card(props) {
     return (
@@ -9,7 +10,9 @@ function Card(props) {
                 < div className={styles.title} > {props.title}</div >
                 <div className={styles.imageBlock}><img className={styles.image} src={props.imgLink} alt={props.title} /></div>
                 <div className={styles.content}>{props.content}</div>
+                <Button />
             </div >
+
         </div>
     );
 }
