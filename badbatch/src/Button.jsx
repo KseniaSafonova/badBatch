@@ -1,7 +1,8 @@
+import styles from './Button.module.css'
 
 function Button() {
     return (
-        <button>Push!</button>
+        <button className={styles.button}>Push!</button>
     )
 }
 
