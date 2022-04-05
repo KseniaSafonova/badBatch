@@ -1,5 +1,23 @@
 .button {
-    width: 50%;
+    width: 30%;
     border-radius: 10px;
     height: 50px;
+    font-family: monospace;
+}
+
+.change_info_button {
+    background-color: darkcyan;
+}
+
+.more_info_button {
+    background-color: seagreen;
+}
+
+.button_selected {
+    background-color: crimson;
+}
+
+.button_select {
+    background-color: rgb(204, 209, 209);
+    border-color: rgb(204, 209, 209);
 }
