@@ -4,6 +4,7 @@ import style from './Button.module.css';
 // import Button from './Button';
 import deathStar from './deathStar.png';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const Button = styled.button`
   background: ${props => props.moreInfo ? "seagreen" : "darkcyan"};
@@ -17,6 +18,13 @@ const Button = styled.button`
 `;
 
 function Card(props) {
+
+    const [pressed, setPressed] = useState(false);
+
+    const handleChange = () => {
+        setPressed(!pressed)
+    }
+
     return (
         // <div className={`${styles.card}  ${styles.selected}`}> add multiple classes
         <div className={styles.card}>
@@ -26,8 +34,8 @@ function Card(props) {
                 } {props.title}</div >
                 <div className={styles.imageBlock}><img className={styles.image} src={props.imgLink} alt={props.title} /></div>
                 <div className={styles.content}>{props.content}</div>
-                <Button moreInfo >More info</Button>
-                <Button changeInfo >Change info</Button>
+                {pressed ? <Button onClick={handleChange} >Close info</Button> : <Button moreInfo onClick={handleChange} >More info</Button>}
+                <Button changeInfo>Change info</Button>
             </div >
         </div>
     );
